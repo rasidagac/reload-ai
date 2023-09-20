@@ -7,10 +7,8 @@ type Section = {
 
 const Section = ({ children, className }: Section) => {
   return (
-    <section className="">
-      <div className={className}>
+    <section className={`xl:px-0 px-2 ${className}`}>
         {children}
-      </div>
     </section>
   );
 };

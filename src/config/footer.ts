@@ -1,5 +1,5 @@
-import { Icons } from "@/components/ui/icons.tsx";
-import {JSX} from "react";
+import { Icons } from "@components/ui/icons";
+import React, {JSX} from "react";
 import {nanoid} from "nanoid";
 
 type footerConfig = {
@@ -18,7 +18,7 @@ type footerConfig = {
     capeTown: { address: string; title: string };
   };
   title: string;
-  logo: (props: any) => JSX.Element;
+  logo: (props: React.HTMLAttributes<SVGElement>) => JSX.Element;
   socialMedias: Array<{key: string, title: string, url: string}>
 };
 

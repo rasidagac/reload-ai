@@ -1,5 +1,5 @@
 import loadable from "@loadable/component";
-import { Skeleton } from "@/components/ui/skeleton.tsx";
+import { Skeleton } from "@components/ui/skeleton";
 import React from "react";
 
 export const Header = loadable(() => import("./Header"), {

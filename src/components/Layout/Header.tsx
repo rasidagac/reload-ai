@@ -1,23 +1,25 @@
 import { Moon, Sun } from "lucide-react";
 
-import { Button } from "@/components/ui/button";
+import { Button } from "@components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+} from "@components/ui/dropdown-menu";
 import { useTheme } from "@/hooks/useTheme";
-import { Icons } from "@/components/ui/icons";
+import { Icons } from "@components/ui/icons";
+import Section from "@components/ui/section";
 
 const Header = () => {
   const { setTheme } = useTheme();
 
   return (
     <header>
-      <div className="container flex h-16 justify-end">
+      <Section className="flex h-16 justify-end">
         <div className="basis-1/3 flex justify-center items-center">
-          <Icons.Logo />
+          <Icons.Logo
+              className="fill-primary" />
         </div>
         <div className="flex justify-end items-center basis-1/3">
           <DropdownMenu>
@@ -41,7 +43,7 @@ const Header = () => {
             </DropdownMenuContent>
           </DropdownMenu>
         </div>
-      </div>
+      </Section>
     </header>
   );
 };

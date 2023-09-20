@@ -14,7 +14,8 @@ const buttonVariants = cva(
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline:
           "border border-primary-foreground text-primary-foreground bg-background hover:bg-button hover:text-button-foreground",
-        secondary: "bg-secondary-foreground text-secondary hover:bg-secondary-foreground/90",
+        secondary:
+          "bg-secondary-foreground text-secondary hover:bg-secondary-foreground/90",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary text-[15px] underline-offset-4 hover:underline",
       },
@@ -52,4 +53,5 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 );
 Button.displayName = "Button";
 
+// eslint-disable-next-line react-refresh/only-export-components
 export { Button, buttonVariants };
