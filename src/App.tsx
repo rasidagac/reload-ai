@@ -5,89 +5,90 @@ import { MoveLeft, MoveRight } from "lucide-react";
 import { Icons } from "@components/ui/icons";
 import ChatBotContainer from "@container/chat-bot";
 import { Separator } from "@components/ui/separator";
+import Cta from "@components/ui/cta";
 
 const { Frame, Logo } = Icons;
 
 function App() {
   return (
     <Layout>
-      <Section className="flex flex-col items-center gap-12 py-16 text-center">
-        <h1>
-          <span className="text-primary">AI</span> Chatbot
-        </h1>
-        <p className="w-[39%]">
-          We’ve trained a model called ChatGPT which interacts in a
-          conversational way.
-        </p>
-        <Button
-          type="button"
-          className="h-[56px] py-0 px-[90px]"
-          variant="secondary"
-        >
-          Continue
-        </Button>
-      </Section>
-      <Section className="flex flex-col items-center gap-12 py-16">
+      <Cta
+        title={
+          <>
+            <span className="text-primary">AI</span> Chatbot
+          </>
+        }
+        description="We’ve trained a model called ChatGPT which interacts in a conversational way."
+        buttonLabel="Continue"
+        className="text-center items-center"
+        innerProps={{
+          buttonProps: {
+            variant: "secondary",
+          },
+          descriptionProps: {
+            className: "w-[39%]",
+          },
+        }}
+      />
+      <Section className="flex flex-col items-center gap-12">
         <Frame className="w-full" />
       </Section>
-      <Section className="flex flex-col items-start gap-8 py-16">
-        <h1>
-          Start chatting with <span className="text-primary">AI.</span>
-        </h1>
-        <div>
-          <p className="w-[65%]">
-            Chat about any topic with ChatGPT in any time. It can be your
-            friend, tutor or therapist.
-          </p>
-        </div>
-        <Button className="p-0" variant="link">
-          Let's start chat
-          <span className="ml-4">
-            <MoveRight />
-          </span>
-        </Button>
-      </Section>
+      <Cta
+        title={
+          <>
+            Start chatting with <span className="text-primary">AI.</span>
+          </>
+        }
+        description="Chat about any topic with ChatGPT in any time. It can be your friend, tutor or therapist."
+        buttonLabel="Let's start chat"
+        innerProps={{
+          buttonProps: {
+            variant: "link",
+            className: "p-0",
+          },
+          descriptionProps: {
+            className: "w-[39%]",
+          },
+        }}
+        buttonIcon={<MoveRight />}
+      />
       <Section>
         <div className="flex border border-primary-foreground rounded-2xl p-4 gap-8">
-        <div className="w-5/12 bg-accent-background justify-between rounded-l-2xl flex flex-col">
-          <Button className="p-0 ml-8 mt-4" variant="link">
-            <span className="mr-4">
-              <MoveLeft />
-            </span>
-            Back
-          </Button>
-          <div className="text-center px-20 py-28">
-            <h2>
-              <span className="text-primary">AI</span> Chatbot
-            </h2>
-            <p>
-              We’ve trained a model called ChatGPT which interacts in a
-              conversational way.
-            </p>
+          <div className="w-5/12 bg-accent-background justify-between rounded-l-2xl flex flex-col">
+            <Button className="p-0 ml-8 mt-4" variant="link">
+              <span className="mr-4">
+                <MoveLeft />
+              </span>
+              Back
+            </Button>
+            <div className="text-center px-20 py-28">
+              <h2>
+                <span className="text-primary">AI</span> Chatbot
+              </h2>
+              <p>
+                We’ve trained a model called ChatGPT which interacts in a
+                conversational way.
+              </p>
+            </div>
+            <Frame className="w-full h-auto" />
           </div>
-          <Frame className="w-full h-auto" />
-        </div>
-        <div className="w-7/12 py-12 flex flex-col justify-between">
-          <Logo
-              className="fill-primary" />
-          <div className="self-center w-3/4">
-            <ChatBotContainer />
+          <div className="w-7/12 py-12 flex flex-col justify-between">
+            <Logo className="fill-primary" />
+            <div className="self-center w-3/4">
+              <ChatBotContainer />
+            </div>
           </div>
-        </div>
         </div>
       </Section>
       <div className="py-44">
         <Separator className="bg-foreground" />
         <Section className="flex h-[70rem] space-x-14">
           <div className="w-1/2 flex flex-col py-20 justify-center space-y-20">
-            <div className="space-y-6">
-              <h1>Chat with unique characters</h1>
-              <p>
-                You can chat many different characters for a few set of topics
-                and interests.
-              </p>
-              <Button>Let's start chat</Button>
-            </div>
+            <Cta
+              title="Chat with unique characters"
+              description="You can chat many different characters for a few set of topics and interests."
+              buttonLabel="Let's start chat"
+            />
             <div className="py-64 rounded-2xl bg-neutral-900" />
           </div>
           <Separator orientation="vertical" className="bg-primary-foreground" />
@@ -123,12 +124,22 @@ function App() {
         </Section>
         <Separator className="bg-primary-foreground" />
       </div>
-      <div className="pt-44 pb-56 flex flex-col gap-y-12 items-center text-center bg-gradient-to-b from-neutral-950 to-background">
-        <h1 className="w-1/2">
-          Let's experiencing the new internet{" "}
-          <span className="text-primary">today.</span>
-        </h1>
-        <Button>Get started for free</Button>
+      <div className="pt-44 pb-56  flex flex-col gap-y-12 items-center text-center bg-gradient-to-b from-neutral-950 to-background">
+        <Cta
+          buttonLabel="Get started for free"
+          title={
+            <>
+              Let's experiencing the new internet
+              <span className="text-primary"> today.</span>
+            </>
+          }
+          innerProps={{
+            titleProps: {
+              className: "lg:w-3/5",
+            },
+          }}
+          className="items-center"
+        />
       </div>
     </Layout>
   );

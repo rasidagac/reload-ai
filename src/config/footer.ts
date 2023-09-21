@@ -1,8 +1,8 @@
 import { Icons } from "@components/ui/icons";
 import React, {JSX} from "react";
-import {nanoid} from "nanoid";
+import { v4 as uuidv4 } from "uuid";
 
-type footerConfig = {
+type footerConfigType = {
   button: { text: string; url: string };
   businessRequires: { phone: string; title: string; email: string };
   openPositions: {
@@ -22,7 +22,7 @@ type footerConfig = {
   socialMedias: Array<{key: string, title: string, url: string}>
 };
 
-export const footerConfig: footerConfig = {
+export const footerConfig: footerConfigType = {
   title: "We would love to hear from you. Let’s work — together with Reload",
   button: {
     text: "Contact us",
@@ -54,17 +54,17 @@ export const footerConfig: footerConfig = {
   logo: Icons.Logo,
   socialMedias: [
     {
-      key: nanoid(),
+      key: uuidv4(),
       title: "DRIBBLE",
       url: "/"
     },
     {
-      key: nanoid(),
+      key: uuidv4(),
       title: "INSTAGRAM",
       url: "/"
     },
     {
-      key: nanoid(),
+      key: uuidv4(),
       title: "LINKEDIN",
       url: "/"
     }

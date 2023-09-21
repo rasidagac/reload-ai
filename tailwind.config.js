@@ -10,7 +10,8 @@ module.exports = {
     container: {
       center: true,
       padding: {
-        DEFAULT: 0,
+        DEFAULT: 8,
+        xl: '2rem'
       },
       screens: {
         "2xl": "1180px",
@@ -22,8 +23,7 @@ module.exports = {
     fontSize: {
       ...defaultTheme.fontSize,
       sm: '1rem',
-      base: "1.25rem",
-      '6xl': '4rem',
+      '6xl': ['4rem', '1.2'],
     },
     extend: {
       colors: {

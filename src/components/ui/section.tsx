@@ -1,13 +1,13 @@
 import React from "react";
 
-type Section = {
+type SectionType = {
   children?: React.ReactNode;
   className?: string
 };
 
-const Section = ({ children, className }: Section) => {
+const Section = ({ children, className = '' }: SectionType) => {
   return (
-    <section className={`xl:px-0 px-2 ${className}`}>
+    <section className={className} >
         {children}
     </section>
   );
