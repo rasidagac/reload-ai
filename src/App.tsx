@@ -112,29 +112,29 @@ function App() {
           <div className="w-1/2 self-center text-lg text-primary-foreground grid grid-cols-2 grid-rows-3 gap-x-6 gap-y-12 ">
             <div>
               <img
-                src="src/assets/img/image-5.png"
+                src="/src/assets/img/image-5.png"
                 alt="Hitachi Digital Brand Ecosystem"
               />
               <p>Hitachi Digital Brand Ecosystem</p>
             </div>
             <div>
-              <img src="src/assets/img/image-4.png" alt="Stråbe" />
+              <img src="/src/assets/img/image-4.png" alt="Stråbe" />
               <p>Stråbe</p>
             </div>
             <div className="row-start-2">
-              <img src="src/assets/img/image-3.png" alt="Commons" />
+              <img src="/src/assets/img/image-3.png" alt="Commons" />
               <p>Commons</p>
             </div>
             <div className="row-start-2">
-              <img src="src/assets/img/image-2.png" alt="Aeizei" />
+              <img src="/src/assets/img/image-2.png" alt="Aeizei" />
               <p>Aeizei</p>
             </div>
             <div className="row-start-3">
-              <img src="src/assets/img/image-1.png" alt="Zvurçyk Fashion" />
+              <img src="/src/assets/img/image-1.png" alt="Zvurçyk Fashion" />
               <p>Zvurçyk Fashion</p>
             </div>
             <div className="row-start-3">
-              <img src="src/assets/img/image.png" alt="Lancome" />
+              <img src="/src/assets/img/image.png" alt="Lancome" />
               <p>Lancome</p>
             </div>
           </div>
