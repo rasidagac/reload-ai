@@ -12,6 +12,7 @@ const { Frame, Logo } = Icons;
 function App() {
   return (
     <Layout>
+      {/* First CTA */}
       <Cta
         title={
           <>
@@ -30,9 +31,13 @@ function App() {
           },
         }}
       />
+
+      {/* Section with Frame */}
       <Section className="flex flex-col items-center gap-12">
         <Frame className="w-full" />
       </Section>
+
+      {/* Second CTA */}
       <Cta
         title={
           <>
@@ -52,8 +57,11 @@ function App() {
         }}
         buttonIcon={<MoveRight />}
       />
+
+      {/* Chat Section */}
       <Section>
         <div className="flex border border-primary-foreground rounded-2xl p-4 gap-8">
+          {/* Left Side */}
           <div className="w-5/12 bg-accent-background justify-between rounded-l-2xl flex flex-col">
             <Button className="p-0 ml-8 mt-4" variant="link">
               <span className="mr-4">
@@ -72,6 +80,8 @@ function App() {
             </div>
             <Frame className="w-full h-auto" />
           </div>
+
+          {/* Right Side */}
           <div className="w-7/12 py-12 flex flex-col justify-between">
             <Logo className="fill-primary" />
             <div className="self-center w-3/4">
@@ -80,9 +90,12 @@ function App() {
           </div>
         </div>
       </Section>
+
+      {/* Third Section */}
       <div className="py-44">
         <Separator className="bg-foreground" />
         <Section className="flex h-[70rem] space-x-14">
+          {/* Left Side */}
           <div className="w-1/2 flex flex-col py-20 justify-center space-y-20">
             <Cta
               title="Chat with unique characters"
@@ -91,7 +104,11 @@ function App() {
             />
             <div className="py-64 rounded-2xl bg-neutral-900" />
           </div>
+
+          {/* Separator */}
           <Separator orientation="vertical" className="bg-primary-foreground" />
+
+          {/* Right Side */}
           <div className="w-1/2 self-center text-lg text-primary-foreground grid grid-cols-2 grid-rows-3 gap-x-6 gap-y-12 ">
             <div>
               <img
@@ -124,6 +141,8 @@ function App() {
         </Section>
         <Separator className="bg-primary-foreground" />
       </div>
+
+      {/* Fourth Section */}
       <div className="pt-44 pb-56  flex flex-col gap-y-12 items-center text-center bg-gradient-to-b from-neutral-950 to-background">
         <Cta
           buttonLabel="Get started for free"
