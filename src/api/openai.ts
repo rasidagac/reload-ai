@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from "uuid";
 import { ChatCompletion } from "openai/resources/chat/completions";
 
 const openai = new OpenAI({
-  apiKey: import.meta.env.VITE_OPENAI_API_KEY,
+  apiKey: process.env.NEXT_PUBLIC_OPENAI_API_KEY,
   dangerouslyAllowBrowser: true,
 });
 

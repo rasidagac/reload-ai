@@ -7,7 +7,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@components/ui/dropdown-menu";
-import { useTheme } from "@/hooks/useTheme";
+import { useTheme } from "next-themes";
 import { Icons } from "@components/ui/icons";
 import Section from "@components/ui/section";
 

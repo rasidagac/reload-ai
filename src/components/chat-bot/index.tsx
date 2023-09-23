@@ -1,13 +1,15 @@
+"use client"
+
 import { ScrollArea } from "@components/ui/scroll-area";
 import ChatBotForm, { FormData } from "@components/chat-bot/Form";
 import { JSX, useEffect, useRef } from "react";
 
-type ChatBot = {
+type ChatBotType = {
   formOnSubmit: (values: FormData) => void;
   children: Array<JSX.Element>;
 };
 
-const ChatBot = ({ formOnSubmit, children }: ChatBot) => {
+const ChatBot = ({ formOnSubmit, children }: ChatBotType) => {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {

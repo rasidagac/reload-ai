@@ -6,6 +6,13 @@ import { Icons } from "@components/ui/icons";
 import ChatBotContainer from "@container/chat-bot";
 import { Separator } from "@components/ui/separator";
 import Cta from "@components/ui/cta";
+import Image from "next/image";
+import image from "../public/img/image.png";
+import image1 from "../public/img/image-1.png";
+import image2 from "../public/img/image-2.png";
+import image3 from "../public/img/image-3.png";
+import image4 from "../public/img/image-4.png";
+import image5 from "../public/img/image-5.png";
 
 const { Frame, Logo } = Icons;
 
@@ -111,30 +118,27 @@ function App() {
           {/* Right Side */}
           <div className="w-1/2 self-center text-lg text-primary-foreground grid grid-cols-2 grid-rows-3 gap-x-6 gap-y-12 ">
             <div>
-              <img
-                src="/img/image-5.png"
-                alt="Hitachi Digital Brand Ecosystem"
-              />
+              <Image src={image5} alt="Hitachi Digital Brand Ecosystem" />
               <p>Hitachi Digital Brand Ecosystem</p>
             </div>
             <div>
-              <img src="/img/image-4.png" alt="Stråbe" />
+              <Image src={image4} alt="Stråbe" />
               <p>Stråbe</p>
             </div>
             <div className="row-start-2">
-              <img src="/img/image-3.png" alt="Commons" />
+              <Image src={image3} alt="Commons" />
               <p>Commons</p>
             </div>
             <div className="row-start-2">
-              <img src="/img/image-2.png" alt="Aeizei" />
+              <Image src={image2} alt="Aeizei" />
               <p>Aeizei</p>
             </div>
             <div className="row-start-3">
-              <img src="/img/image-1.png" alt="Zvurçyk Fashion" />
+              <Image src={image1} alt="Zvurçyk Fashion" />
               <p>Zvurçyk Fashion</p>
             </div>
             <div className="row-start-3">
-              <img src="/img/image.png" alt="Lancome" />
+              <Image src={image} alt="Lancome" />
               <p>Lancome</p>
             </div>
           </div>
@@ -148,7 +152,7 @@ function App() {
           buttonLabel="Get started for free"
           title={
             <>
-              Let's experiencing the new internet
+              Let`&apos;s experiencing the new internet
               <span className="text-primary"> today.</span>
             </>
           }
