@@ -94,7 +94,7 @@
     @apply container;
   }
 }
-
+/*
 @font-face {
   font-family: "SF Pro Display";
   src: url(./assets/fonts/SFProDisplay-Bold.woff) format("woff");
@@ -117,4 +117,4 @@
   font-weight: normal;
   font-style: normal;
   font-display: swap;
-}
+} */

@@ -3,7 +3,7 @@ import tailwindcss_animate from "tailwindcss-animate";
 import defaultTheme from "tailwindcss/defaultTheme";
 /*eslint-env node*/
 module.exports = {
-  content: ["./src/**/*.{ts,tsx}"],
+  content: ["./src/**/*.{js,ts,jsx,tsx,mdx}",],
   darkMode: ["class"],
   plugins: [tailwindcss_animate],
   theme: {
